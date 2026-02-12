@@ -3,6 +3,9 @@ const autocompleteBox = document.getElementById("autocomplete");
 const resultsBox = document.getElementById("results");
 const latencyBox = document.getElementById("latency");
 const homeInfo = document.getElementById("homeInfo");
+const API_BASE = "https://gateway-backend-latest.onrender.com/api";
+//this is a public key ,chill out
+const API_KEY = "ab0f6bcad8e12d9ee46570f970fda3216750e25bc6189b3e5b69d6a207a80473";
 
 const docViewer = document.getElementById("docViewer");
 const docText = document.getElementById("docText");
@@ -27,7 +30,9 @@ searchInput.addEventListener("input", () => {
     clearTimeout(debounceTimer);
 
     debounceTimer = setTimeout(() => {
-        fetch(`/autocomplete?prefix=${encodeURIComponent(value)}`)
+        fetch(`${API_BASE}/autocomplete?prefix=${encodeURIComponent(value)}`, {
+            headers: { "X-API-Key": API_KEY }
+        })
             .then(res => res.json())
             .then(data => {
                 autocompleteBox.innerHTML = "";
@@ -61,7 +66,9 @@ function runSearch() {
     const query = searchInput.value.trim();
     if (!query) return;
 
-    fetch(`/search?q=${encodeURIComponent(query)}`)
+    fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`, {
+        headers: { "X-API-Key": API_KEY }
+    })
         .then(res => res.json())
         .then(data => {
             latencyBox.textContent = `Search latency: ${data.latencyMs} ms`;
@@ -98,7 +105,9 @@ function renderResults(results) {
    ========================= */
 
 function loadDocument(docId) {
-    fetch(`/doc?id=${docId}`)
+    fetch(`${API_BASE}/doc?id=${docId}`, {
+        headers: { "X-API-Key": API_KEY }
+    })
         .then(res => res.json())
         .then(data => {
             docText.innerHTML = formatDocument(data.text);
