@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>LexCorpusEngine Demo</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page">
+
+    <!-- Header -->
+    <header class="header">
+        <h1>LexCorpusEngine</h1>
+        <p class="tagline">In-memory index-based search engine with BM25 ranking</p>
+
+        <div class="links">
+            <a href="https://github.com/ashishalrashid" target="_blank">
+                GitHub · Rashid
+            </a>
+            <a href="https://github.com/ashishalrashid/LexCorpusEngine---Index-Based-Search-Engine" target="_blank">
+                Project Repository
+            </a>
+        </div>
+    </header>
+
+
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search the corpus…"
+            autocomplete="off"
+        />
+        <div id="autocomplete" class="autocomplete"></div>
+        <div id="latency" class="latency"></div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="results"></section>
+
+        <!-- Home / About -->
+    <section id="homeInfo" class="home-info">
+        <h2>About the Project</h2>
+
+        <p>
+            <strong>LexCorpusEngine</strong> is a lightweight, in-memory search engine
+            built entirely from scratch in Java. It implements an inverted index,
+            BM25 ranking, and a trie-based autocomplete system with a strong focus on
+            performance, correctness, and architectural clarity.
+        </p>
+
+        <p>
+            This demo runs on a locally indexed text corpus and exposes search,
+            autocomplete, and document retrieval APIs via a custom HTTP server.
+            The frontend is intentionally framework-free.
+        </p>
+
+        <h3>Author</h3>
+        <p>
+            Ashish Al Rashid<br/>
+            <a href="https://github.com/ashishalrashid" target="_blank">
+                github.com/ashishalrashid
+            </a>
+        </p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>Inverted index with BM25 ranking</li>
+            <li>Trie-based autocomplete with Top-K suggestions</li>
+            <li>Custom binary persistence format</li>
+            <li>Zero external dependencies</li>
+            <li>Latency-aware design</li>
+        </ul>
+    </section>
+</div>
+
+<!-- Document Viewer -->
+<div id="docViewer" class="doc-viewer">
+    <div class="doc-header">
+        <button id="closeDoc">✕ Close</button>
+    </div>
+    <div id="docText" class="doc-text"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
