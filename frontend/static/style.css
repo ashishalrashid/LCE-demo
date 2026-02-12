@@ -1,0 +1,241 @@
+/* =========================
+   Global / Reset
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0d0d0d;
+    color: #e6e6e6;
+}
+
+/* =========================
+   Page Container
+   ========================= */
+
+.page {
+    min-height: 100vh;          /* Full viewport height */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+.header h1 {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 44px;          /* bigger */
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+}
+.header h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #7aa2f7;
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+
+.tagline {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #a0a0a0;
+    max-width: 700px;
+}
+
+
+.links {
+    margin-top: 14px;
+}
+
+.links a {
+    color: #7aa2f7;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Search Section
+   ========================= */
+
+.search-section {
+    margin-top: 40px;
+    position: relative;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+
+    background: #161616;
+    color: #ffffff;
+
+    border: 1px solid #333;
+    border-radius: 6px;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #777;
+}
+
+#searchInput:focus {
+    border-color: #7aa2f7;
+}
+
+/* =========================
+   Latency
+   ========================= */
+
+.latency {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* =========================
+   Autocomplete
+   ========================= */
+
+.autocomplete {
+    position: absolute;
+    top: 52px;
+    width: 100%;
+
+    background: #161616;
+    border: 1px solid #333;
+    border-radius: 6px;
+
+    z-index: 1000;
+}
+
+.autocomplete div {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #e6e6e6;
+}
+
+.autocomplete div:hover {
+    background: #222;
+}
+
+/* =========================
+   Search Results
+   ========================= */
+
+.results {
+    margin-top: 30px;
+}
+
+.result {
+    padding: 14px 0;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+}
+
+.result:last-child {
+    border-bottom: none;
+}
+
+.result-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.result-preview {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #aaaaaa;
+}
+
+/* =========================
+   Document Viewer Overlay
+   ========================= */
+
+.doc-viewer {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    background: #0d0d0d;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* =========================
+   Document Header
+   ========================= */
+
+.doc-header {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+#closeDoc {
+    background: none;
+    border: 1px solid #444;
+    color: #dddddd;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+#closeDoc:hover {
+    background: #222;
+}
+
+/* =========================
+   Document Text
+   ========================= */
+
+.doc-text {
+    max-width: 900px;
+    margin: 0 auto;
+
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e6e6e6;
+}
+
+.doc-text p {
+    margin: 0 0 14px 0;
+}
+
+/* =========================
+   Optional: Selection
+   ========================= */
+
+::selection {
+    background: #7aa2f7;
+    color: #000;
+}

@@ -1,0 +1,13 @@
+/home/rashid/projects/deployment-lce/src/main/java/LCE/SearchEngine.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/SearchConfig.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/ARC.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/LCEngine.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/TextProcessor.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/NoOpCache.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/CacheFactory.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/Cache.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/TrieNode.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/AutocompleteEngine.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/LRU.java
+/home/rashid/projects/deployment-lce/src/main/java/demo/DemoServer.java
+/home/rashid/projects/deployment-lce/src/main/java/LCE/CachePolicy.java
